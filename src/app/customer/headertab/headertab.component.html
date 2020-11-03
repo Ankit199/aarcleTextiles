@@ -1,1 +1,123 @@
-<p>headertab works!</p>
+<div class="header clearfix"> 
+    <!-- TOPBAR -->
+    <div class="topBar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-none d-md-block">
+            <ul class="list-inline">
+              <li><a href="#!"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#!"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#!"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#!"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-12">
+            <ul class="list-inline float-right top-right">
+              <li class="account-login"><span><a href='login.html'><i class="fa fa-lock"></i> Log in</a><small>or</small><a href='signup.html'><i class="fa fa-user"></i> Sign Up</a></span></li>
+              <li class="searchBox"> <a href="#"><i class="fa fa-search"></i></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li> <span class="input-group">
+                    <input type="text" class="form-control" placeholder="Search…">
+                    <button type="submit" class="input-group-addon">Search</button>
+                    </span> </li>
+                </ul>
+              </li>
+              <li class="dropdown cart-dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>$0</a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li>Item(s) in your cart</li>
+                  <li> <a href="single-product.html">
+                    <div class="media"> <img class="media-left media-object" src="./assets/images/cart-items/cart-item-01.jpg" alt="cart-Image">
+                      <div class="media-body">
+                        <h5 class="media-heading">INCIDIDUNT UT <br>
+                          <span>2 X $199</span></h5>
+                      </div>
+                    </div>
+                    </a> </li>
+                  <li> <a href="single-product.html">
+                    <div class="media"> <img class="media-left media-object" src="./assets/images/cart-items/cart-item-01.jpg" alt="cart-Image">
+                      <div class="media-body">
+                        <h5 class="media-heading">INCIDIDUNT UT <br>
+                          <span>2 X $199</span></h5>
+                      </div>
+                    </div>
+                    </a> </li>
+                  <li>
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';">Shopping Cart</button>
+                      <button type="button" class="btn btn-default" onclick="location.href='checkout-step-1.html';">Checkout</button>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-main navbar-default navbar-expand-md" role="navigation">
+      <div class="container"> 
+        <!-- Brand and toggle get grouped for better mobile display --> 
+        
+        <a class="navbar-brand" href="index.html"> <img src="./assets/images/logo.png" title="Aarcle"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-controls="navbar-ex1-collapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="fa fa-bars"></span> </button>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a href="sale.html" class="nav-link" role="button">Sale</a></li>
+            <li class="nav-item"><a href="distributor.html" class="nav-link" role="button">Distributor</a></li>
+            <li class="nav-item dropdown "> <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu dropdown-menu-left">
+                <li><a href="men-jeans.html">Men Jeans</a></li>
+                <li><a href="women-jeans.html">Women Jeans</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="contact-us.html" class="nav-link" role="button">Contact Us</a></li>
+            <li class="nav-item dropdown "> <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li class=""><a href="account-dashboard.html">Dashboard</a></li>
+                <li class=""><a href="account-profile.html">Profile</a></li>
+                <li class=""><a href="account-all-orders.html">All Orders</a></li>
+                <li class=""><a href="account-single-order.html">Single Order</a></li>
+                <li class=""><a href="account-wishlist.html">Wishlist</a></li>
+                <li class=""><a href="account-address.html">Address</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- <div class="version2">
+          <div class="dropdown cart-dropdown">
+             <a href="javascript:void(0)" class="dropdown-toggle shop-cart" data-toggle="dropdown"> <i class="fa fa-shopping-cart"></i> <span class="badge">3</span> </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li>Item(s) in your cart</li>
+              <li> <a href="single-product.html">
+                <div class="media"> <img class="media-left media-object" src="./assets/images/cart-items/cart-item-01.jpg" alt="cart-Image">
+                  <div class="media-body">
+                    <h5 class="media-heading">INCIDIDUNT UT <br>
+                      <span>2 X $199</span></h5>
+                  </div>
+                </div>
+                </a> </li>
+              <li> <a href="single-product.html">
+                <div class="media"> <img class="media-left media-object" src="./assets/images/cart-items/cart-item-01.jpg" alt="cart-Image">
+                  <div class="media-body">
+                    <h5 class="media-heading">INCIDIDUNT UT <br>
+                      <span>2 X $199</span></h5>
+                  </div>
+                </div>
+                </a> </li>
+              <li>
+                <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';">Shopping Cart</button>
+                  <button type="button" class="btn btn-default" onclick="location.href='checkout-step-1.html';">Checkout</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </nav>
+  </div>

@@ -21,15 +21,15 @@ import { FootertabComponent } from './customer/footertab/footertab.component';
     AppComponent,
     LoginComponent, 
     SignupComponent,
-    DashboardComponent,
-    HeadertabComponent,
+   // DashboardComponent,
+   // HeadertabComponent,
     SubheadertabComponent,    
-    FootertabComponent,    
-    ContactusComponent,    
-    DistributerComponent,    
-    SaleComponent,    
-    MensproductComponent,    
-    WomensproductComponent
+  //  FootertabComponent,    
+    // ContactusComponent,    
+    // DistributerComponent,    
+    // SaleComponent,    
+    // MensproductComponent,    
+    // WomensproductComponent
   ],
   imports: [
     BrowserModule,

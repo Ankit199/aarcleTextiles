@@ -6,12 +6,19 @@ import { WomensproductComponent } from './womensproduct/womensproduct.component'
 import { DistributerComponent } from './distributer/distributer.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DashboardComponent } from '../admin/dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+import { HeadertabComponent } from './headertab/headertab.component';
+import { FootertabComponent } from './footertab/footertab.component';
 
+const   routeCoustomer:any=[ { path: '', component: HomeComponent}]
 
 @NgModule({
-  declarations: [SaleComponent,MensproductComponent,WomensproductComponent,DistributerComponent,ContactusComponent,DashboardComponent],
+  declarations: [FootertabComponent,HeadertabComponent, HomeComponent,SaleComponent,MensproductComponent,WomensproductComponent,
+    DistributerComponent,ContactusComponent,DashboardComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(routeCoustomer),
   ]
 })
 export class customerModule { }
