@@ -10,11 +10,11 @@ import { HeadertabComponent } from './customer/headertab/headertab.component';
 import { SubheadertabComponent } from './customer/subheadertab/subheadertab.component';
 
 import { FootertabComponent } from './customer/footertab/footertab.component';
-import { ContactusComponent } from './customer/contactus/contactus.component';
-import { DistributerComponent } from './customer/distributer/distributer.component';
-import { SaleComponent } from './customer/sale/sale.component';
-import { MensproductComponent } from './customer/mensproduct/mensproduct.component';
-import { WomensproductComponent } from './customer/womensproduct/womensproduct.component';
+// import { ContactusComponent } from './customer/contactus/contactus.component';
+// import { DistributerComponent } from './customer/distributer/distributer.component';
+// import { SaleComponent } from './customer/sale/sale.component';
+// import { MensproductComponent } from './customer/mensproduct/mensproduct.component';
+// import { WomensproductComponent } from './customer/womensproduct/womensproduct.component';
 
 @NgModule({
   declarations: [
