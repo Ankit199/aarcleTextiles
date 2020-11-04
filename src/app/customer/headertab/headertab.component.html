@@ -63,15 +63,15 @@
         <a class="navbar-brand" [routerLink]="['/']" href="javascrip.void(0)"> <img src="./assets/images/logo.png" title="Aarcle"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-controls="navbar-ex1-collapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="fa fa-bars"></span> </button>
         
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Collect the nav links, forms, and other content for toggling [routerLink]="['../account/sale']"-->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item"><a [routerLink]="['./sale']" href="javascrip.void(0)" class="nav-link" role="button">Sale</a></li>
-            <li class="nav-item"><a [routerLink]="['./distributor']" href="javascrip.void(0)" class="nav-link" role="button">Distributor</a></li>
+            <li class="nav-item"><a  [routerLink]="['./sale']"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"  class="nav-link" role="button">Sale</a></li>
+            <li class="nav-item"><a [routerLink]="['./distributor']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" href="javascrip.void(0)" class="nav-link" role="button">Distributor</a></li>
             <li class="nav-item dropdown "> <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="men-jeans.html">Men Jeans</a></li>
-                <li><a href="women-jeans.html">Women Jeans</a></li>
+                <li><a [routerLink]="['./mens']" href="javascript:void(0)">Men Jeans</a></li>
+                <li><a [routerLink]="['./womens']" href="javascript:void(0)">Women Jeans</a></li>
               </ul>
             </li>
             <li class="nav-item"><a href="contact-us.html" class="nav-link" role="button">Contact Us</a></li>

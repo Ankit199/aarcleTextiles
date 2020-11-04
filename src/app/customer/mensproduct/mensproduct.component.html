@@ -1,1 +1,355 @@
-<p>mensproduct works!</p>
+<section class="lightSection clearfix pageHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="page-title">
+            <h2>Products</h2>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-right">
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="products.html">Products</a> </li>
+            <li class="active">Men Jeans</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mainContent clearfix productsContent">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 sideBar">
+          <div class="panel panel-default filterNormal">
+            <div class="panel-heading">PRODUCT CATEGORIES</div>
+            <div class="panel-body">
+              <div class="collapse navbar-collapse navbar-ex1-collapse navbar-side-collapse">
+                <ul class="nav navbar-nav side-nav">
+                  <li class="active"> <a href="#!" data-toggle="collapse" aria-expanded="false" data-target="#men">Men <i class="fa fa-plus"></i></a>
+                    <ul id="men" class="collapse collapseItem show">
+                      <li><a href="men-jeans.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Jeans <span>(8)</span></a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#!" data-toggle="collapse" aria-expanded="true" data-target="#women">Women <i class="fa fa-plus"></i></a>
+                    <ul id="women" class="collapse collapseItem">
+                      <li><a href="women-jeans.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Jeans <span>(6)</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default priceRange">
+            <div class="panel-heading">Filter by Price</div>
+            <div class="panel-body clearfix">
+              <div class="price-slider-inner"> <span class="amount-wrapper"> Price:
+                <input type="text" id="price-amount-1" readonly="">
+                <strong>-</strong>
+                <input type="text" id="price-amount-2" readonly="">
+                </span>
+                <div id="price-range" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 100%;"></span></div>
+              </div>
+              <input class="btn-default" type="submit" value="Filter">
+            </div>
+          </div>
+          <div class="panel panel-default filterNormal">
+            <div class="panel-heading">filter by Size</div>
+            <div class="panel-body">
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 28 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 30 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 32 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 34 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 36 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 38 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 40 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 42 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 44 </span> </label>
+              <label class="checkbox-btn">
+                <input type="checkbox">
+                <span class="btn btn-light"> 46 </span> </label>
+              <div class="filter-content collapse show" id="collapse_aside3" style=""> </div>
+            </div>
+          </div>
+          <div class="panel panel-default filterNormal">
+            <div class="panel-heading">Filter by Color</div>
+            <div class="panel-body">
+              <div class="form-check">
+                <input id="red" class="checkbox-custom form-check-input" name="red" type="checkbox">
+                <label for="red" class="checkbox-custom-label form-check-label">Red</label>
+              </div>
+              <div class="form-check">
+                <input id="green" class="checkbox-custom form-check-input" name="green" type="checkbox">
+                <label for="green" class="checkbox-custom-label form-check-label">Green</label>
+              </div>
+              <div class="form-check">
+                <input id="blue" class="checkbox-custom form-check-input" name="blue" type="checkbox">
+                <label for="blue" class="checkbox-custom-label form-check-label">Blue</label>
+              </div>
+              <div class="form-check">
+                <input id="black" class="checkbox-custom form-check-input" name="black" type="checkbox">
+                <label for="black" class="checkbox-custom-label form-check-label">Black</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-8">
+          <div id="menu1" class="tab-pane fade active show" aria-expanded="true">
+            <div class="row">
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-03.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-04.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption clearfix"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-05.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-06.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-07.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-08.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-03.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-04.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                <div class="imageBox">
+                  <div class="productImage clearfix"> <a href="single-product.html"> <img src="./assets/images/products/product-05.jpg" alt="featured-product-img"> </a>
+                    <div class="productMasking">
+                      <ul class="list-inline btn-group" role="group">
+                        <li><a class="btn btn-default btn-wishlist"><i class="fa fa-heart-o"></i></a></li>
+                        <li><a href="javascript:void(0)" class="btn btn-default" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="fa fa-shopping-basket"></i></a></li>
+                        <li><a data-toggle="modal" href=".quick-view" class="btn btn-default" tabindex="-1"><i class="fa fa-eye"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="productCaption"> <a href="single-product.html">
+                    <h4>Jeans</h4>
+                    </a>
+                    <h3>$ 99</h3>
+                    <div class="row">
+                      <div class="col-6 pr-1">
+                        <button class="btn btn-block btn-danger-outlined mt-3"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                      </div>
+                      <div class="col-6 pl-1">
+                        <button class="btn btn-block btn-warning mt-3"><i class="fa fa-play"></i> Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

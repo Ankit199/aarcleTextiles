@@ -1,5 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { SaleComponent } from './sale/sale.component';
 import { MensproductComponent } from './mensproduct/mensproduct.component';
 import { WomensproductComponent } from './womensproduct/womensproduct.component';
@@ -13,18 +13,18 @@ import { FootertabComponent } from './footertab/footertab.component';
 import { PrivacypoliceComponent } from './privacypolice/privacypolice.component';
 import { SingleproductComponent } from './singleproduct/singleproduct.component';
 import { UserinterfaceComponent } from './userinterface/userinterface.component';
-import { BrowserModule } from '@angular/platform-browser';
+
 
 
 const   routeCoustomer:Routes=[ 
-  { path: '', component: HomeComponent,pathMatch:"full",outlet:'customer'},
-{ path: 'policy', component: PrivacypoliceComponent,outlet:'customer'},
-{ path: 'contact', component: ContactusComponent},
-{ path: 'distributor', component: DistributerComponent},
-{ path: 'mens', component: MensproductComponent},
-{ path: 'womens', component: WomensproductComponent},
-{ path: 'sale', component: SaleComponent},
-{ path: 'productview', component: SingleproductComponent}
+  { path: '', component: HomeComponent, pathMatch: 'full'},
+{ path: 'policy',  pathMatch: 'full',component: PrivacypoliceComponent},
+{ path: 'contact', pathMatch: 'full',component: ContactusComponent},
+{ path: 'distributor',pathMatch: 'full', component: DistributerComponent},
+{ path: 'mens', pathMatch: 'full',component: MensproductComponent},
+{ path: 'womens',pathMatch: 'full', component: WomensproductComponent},
+{ path: 'sale', pathMatch: 'full',component: SaleComponent},
+{ path: 'productview', pathMatch: 'full',component: SingleproductComponent}
 ]
 
 @NgModule({
@@ -35,7 +35,11 @@ const   routeCoustomer:Routes=[
   imports: [
     CommonModule,        
     RouterModule.forChild(routeCoustomer)
-  ],exports:[RouterModule],
+  ],  exports: [RouterModule],
+  providers: [ {
+      provide: LocationStrategy, 
+      useClass: PathLocationStrategy} ],
+
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class CustomerModule { }
