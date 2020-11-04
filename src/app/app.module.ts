@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './account/login/login.component';
 import { SignupComponent } from './account/signup/signup.component';
 import { SubheadertabComponent } from './customer/subheadertab/subheadertab.component';
+import { ForgotpasswordComponent } from './account/forgotpassword/forgotpassword.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent, 
     SignupComponent, 
-    SubheadertabComponent    
+    SubheadertabComponent, ForgotpasswordComponent, NotfoundComponent    
   ],
   imports: [
     BrowserModule,

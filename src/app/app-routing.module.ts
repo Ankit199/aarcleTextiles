@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { ForgotpasswordComponent } from './account/forgotpassword/forgotpassword.component';
 import { LoginComponent } from './account/login/login.component';
 import { SignupComponent } from './account/signup/signup.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UserinterfaceComponent } from './customer/userinterface/userinterface.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'in' },
@@ -14,7 +17,10 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: '**', redirectTo: '/' },
+  { path: 'admin',pathMatch: 'full', component: DashboardComponent },
+  { path: 'forgot-password',pathMatch: 'full', component: ForgotpasswordComponent },
+  { path: 'notfound',pathMatch: 'full', component: NotfoundComponent },
+  { path: '**', redirectTo: 'notfound' },
 ];
 
 @NgModule({

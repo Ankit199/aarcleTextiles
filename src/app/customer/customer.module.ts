@@ -5,7 +5,7 @@ import { MensproductComponent } from './mensproduct/mensproduct.component';
 import { WomensproductComponent } from './womensproduct/womensproduct.component';
 import { DistributerComponent } from './distributer/distributer.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { DashboardComponent } from '../admin/dashboard/dashboard.component';
+
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeadertabComponent } from './headertab/headertab.component';
@@ -13,18 +13,25 @@ import { FootertabComponent } from './footertab/footertab.component';
 import { PrivacypoliceComponent } from './privacypolice/privacypolice.component';
 import { SingleproductComponent } from './singleproduct/singleproduct.component';
 import { UserinterfaceComponent } from './userinterface/userinterface.component';
+import { DashboardComponent } from './userprofile/dashboard/dashboard.component';
 
 
 
 const   routeCoustomer:Routes=[ 
   { path: '', component: HomeComponent, pathMatch: 'full'},
 { path: 'policy',  pathMatch: 'full',component: PrivacypoliceComponent},
-{ path: 'contact', pathMatch: 'full',component: ContactusComponent},
+{ path: 'contact-us', pathMatch: 'full',component: ContactusComponent},
 { path: 'distributor',pathMatch: 'full', component: DistributerComponent},
 { path: 'mens', pathMatch: 'full',component: MensproductComponent},
 { path: 'womens',pathMatch: 'full', component: WomensproductComponent},
 { path: 'sale', pathMatch: 'full',component: SaleComponent},
-{ path: 'productview', pathMatch: 'full',component: SingleproductComponent}
+{ path: 'productview', pathMatch: 'full',component: SingleproductComponent},
+{
+  path: 'my-account',
+  component: DashboardComponent,
+  loadChildren: () =>
+    import('./userprofile/dashboard.module').then((m) => m.DashboardModule),
+}
 ]
 
 @NgModule({
