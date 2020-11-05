@@ -1,36 +1,41 @@
 <section class="lightSection clearfix pageHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="page-title">
-            <h2>ACCOUNT DASHBOARD</h2>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-right">
-            <li> <a href="index.html">Home</a> </li>
-            <li class="active">ACCOUNT DASHBOARD</li>
-          </ol>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="page-title">
+          <h2>{{breedcum}}</h2>
         </div>
       </div>
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-right">
+          <li> <a [routerLink]="['/']" href="#">Home</a> </li>
+          <li class="active">{{breedcum}}</li>
+        </ol>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="mainContent clearfix userProfile">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="btn-group" role="group" aria-label="...">
-             <a [routerLink]="['./']"  href="#" class="btn btn-default active"><i class="fa fa-th" aria-hidden="true"></i>Account Dashboard</a>
-              <a [routerLink]="['./profile']"  href="#" class="btn btn-default"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
-               <a href="#" [routerLink]="['./addaddress']"  class="btn btn-default"><i class="fa fa-map-marker" aria-hidden="true"></i>My Address</a>
-                <a href="#" [routerLink]="['./order']"  class="btn btn-default"><i class="fa fa-list" aria-hidden="true"></i>All Orders</a>
-                 <a [routerLink]="['./wishlist']"  href="#" class="btn btn-default"><i class="fa fa-gift" aria-hidden="true"></i>Wishlist</a> 
-                </div>
+<section class="mainContent clearfix userProfile">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="btn-group" role="group" aria-label="...">
+          <a [routerLink]="['./']" id="U1" (click)="applyActiveClass('U1','Account Dashboard')" href="#" class="u btn btn-default active"><i
+              class="fa fa-th" aria-hidden="true"></i>Account Dashboard</a>
+          <a [routerLink]="['./profile']" id="U2" (click)="applyActiveClass('U2','Profile')" href="#" class="u btn btn-default"><i
+              class="fa fa-user" aria-hidden="true"></i>Profile</a>
+          <a href="#" [routerLink]="['./addaddress']" id="U3" (click)="applyActiveClass('U3','My Address')"
+            class="u btn btn-default"><i class="fa fa-map-marker" aria-hidden="true"></i>My Address</a>
+          <a href="#" [routerLink]="['./order']" id="U4" (click)="applyActiveClass('U4','All Orders')" class="u btn btn-default"><i
+              class="fa fa-list" aria-hidden="true"></i>All Orders</a>
+          <a [routerLink]="['./wishlist']" id="U5" (click)="applyActiveClass('U5','Wishlist')" href="#"
+            class="u btn btn-default"><i class="fa fa-gift" aria-hidden="true"></i>Wishlist</a>
         </div>
       </div>
-     <router-outlet>
-         
-     </router-outlet>
     </div>
-  </section>
+    <router-outlet>
+
+    </router-outlet>
+  </div>
+</section>
