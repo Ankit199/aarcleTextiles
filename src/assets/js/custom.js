@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
   "use strict";
-  $(window).on("load", function () {
+  jQuery(window).on("load", function () {
     $('.scrolling  a[href*="#"]').on("click", function (e) {
       e.preventDefault(), e.stopPropagation();
       var o = $(this).attr("href");

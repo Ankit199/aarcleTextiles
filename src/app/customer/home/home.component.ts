@@ -13,7 +13,7 @@ scriptUrl:string='../../../assets/js/custom.js';
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
-   this.addJsToElement(this.scriptUrl)
+   this.addJsToElement(this.scriptUrl);
   }
   addJsToElement(src: string): HTMLScriptElement {
     const script = document.createElement('script');

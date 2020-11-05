@@ -6,11 +6,11 @@
           <div class="footerLink">
             <h5>Quick Links</h5>
             <ul class="list-unstyled">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about-us.html">About Us</a></li>
-              <li><a href="contact-us.html">Contact Us</a></li>
-              <li><a href="privacy-policy.html">Privacy Policy</a></li>
-              <li><a href="terms-and-conditions.html">Terms and Conditions</a></li>
+              <li><a [routerLink]="['/']" href="#">Home</a></li>
+              <li><a [routerLink]="['./about-us']" href="#">About Us</a></li>
+              <li><a [routerLink]="['./contact-us']" href="#">Contact Us</a></li>
+              <li><a [routerLink]="['./policy']" href="#">Privacy Policy</a></li>
+              <li><a [routerLink]="['./term-condition']" href="#">Terms and Conditions</a></li>
             </ul>
           </div>
         </div>
@@ -18,8 +18,8 @@
           <div class="footerLink">
             <h5>Products</h5>
             <ul class="list-unstyled">
-              <li><a href="men-jeans.html">Men Jeans</a></li>
-              <li><a href="women-jeans.html">Women Jeans</a></li>
+              <li><a [routerLink]="['./mens']" href="#">Men Jeans</a></li>
+              <li><a [routerLink]="['./womens']" href="#">Women Jeans</a></li>
             </ul>
           </div>
         </div>
@@ -32,6 +32,7 @@
               <li><img src="./assets/images/card3.png" title="Master"></li>
               <li><img src="./assets/images/card4.png" title="Discover"></li>
             </ul>
+            <div class="clerifix"><br/></div>
             <h5>Follow us</h5>
             <ul class="list-inline">              
               <li><a href="#!"><i class="fa fa-facebook"></i></a></li>
@@ -45,10 +46,14 @@
           <div class="footerLink">
             <h5>Contact Details</h5>
             <ul class="list-unstyled">
-              <li><i class="fa fa-map-marker"></i> XYZ, UP, INDIA</li>
-              <li><i class="fa fa-mobile"></i> +91-1234 567 890</li>
-              <li><i class="fa fa-envelope"></i> <a href="mailto:info@aarcle.com">info@aarcle.com</a></li>
-              <li><i class="fa fa-globe"></i> <a href="http://aarcle.com">www.aarcle.com</a></li>
+              <li><i class="fa fa-map-marker"></i> Aarcle Textiles,
+                 DSE 767, Sector C
+                Aliganj, Lucknow-226021,
+                Uttar Pradesh , INDIA
+              </li>
+              <li><i class="fa fa-mobile"></i> +91-7860 609 118</li>
+              <li><i class="fa fa-envelope"></i> <a href="mailto:info@aarcle.com">  info@aarcle.com</a></li>
+              <li><i class="fa fa-globe"></i> <a href="http://aarcle.com">  www.aarcle.com</a></li>
             </ul>
           </div>
         </div>

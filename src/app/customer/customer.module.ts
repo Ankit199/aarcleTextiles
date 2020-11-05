@@ -14,6 +14,8 @@ import { PrivacypoliceComponent } from './privacypolice/privacypolice.component'
 import { SingleproductComponent } from './singleproduct/singleproduct.component';
 import { UserinterfaceComponent } from './userinterface/userinterface.component';
 import { DashboardComponent } from './userprofile/dashboard/dashboard.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { TermconditionsComponent } from './termconditions/termconditions.component';
 
 
 
@@ -21,6 +23,8 @@ const   routeCoustomer:Routes=[
   { path: '', component: HomeComponent, pathMatch: 'full'},
 { path: 'policy',  pathMatch: 'full',component: PrivacypoliceComponent},
 { path: 'contact-us', pathMatch: 'full',component: ContactusComponent},
+{ path: 'about-us', pathMatch: 'full',component: AboutusComponent},
+{ path: 'term-condition', pathMatch: 'full',component: TermconditionsComponent},
 { path: 'distributor',pathMatch: 'full', component: DistributerComponent},
 { path: 'mens', pathMatch: 'full',component: MensproductComponent},
 { path: 'womens',pathMatch: 'full', component: WomensproductComponent},
@@ -37,7 +41,9 @@ const   routeCoustomer:Routes=[
 @NgModule({
   declarations: [ UserinterfaceComponent,
    HomeComponent,SaleComponent,MensproductComponent,WomensproductComponent,
-   DistributerComponent,ContactusComponent,DashboardComponent, PrivacypoliceComponent,HeadertabComponent,FootertabComponent
+   DistributerComponent,ContactusComponent,DashboardComponent, 
+   PrivacypoliceComponent,HeadertabComponent,
+   FootertabComponent, AboutusComponent, TermconditionsComponent
   ],
   imports: [
     CommonModule,        
