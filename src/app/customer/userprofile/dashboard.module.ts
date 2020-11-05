@@ -14,7 +14,11 @@ import { ProfileComponent } from './dashboard/profile/profile.component';
 
 const   routeprofile:Routes=[ 
   { path: '', component: DefaultprofileComponent, pathMatch: 'full'},
-{ path: 'wishlist',  pathMatch: 'full',component: WishlistComponent},
+    { path: 'wishlist',  pathMatch: 'full',component: WishlistComponent},
+    { path: 'profile',  pathMatch: 'full',component: ProfileComponent},
+    { path: 'order',  pathMatch: 'full',component: OrderlistComponent},
+    { path: 'orderdetail',  pathMatch: 'full',component: OrderdetailComponent},
+    { path: 'addaddress',  pathMatch: 'full',component: AddressComponent},
 ]
 
 @NgModule({

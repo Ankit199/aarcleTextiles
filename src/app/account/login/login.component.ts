@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
    goToAuth=()=>{
      debugger;
 //this.router.navigateByUrl['admin'];
-this.router.navigate['/admin'];
+this.router.navigate(['/admin']);
    }
 
 }
