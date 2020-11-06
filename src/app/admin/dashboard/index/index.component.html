@@ -17,8 +17,15 @@
             </div>
             <div class="row">
               <div class="col-md-3 col-sm-6 mb-3">
-              <label>User Name</label>
+              <label>Product Title</label>
                 <input type="text" class="form-control">
+              </div>
+              <div class="col-md-3 col-sm-6 mb-3">
+              <label>Select Category</label>
+              <select name="Description" id="Description" class="form-control">               
+                <option value="Size">Sizing</option>
+                <option value="Ship">Shiping</option>
+              </select>
               </div>
               <div class="col-md-3 col-sm-6 mb-3">
               <label>User Name</label>
@@ -43,11 +50,26 @@
               <div class="col-md-3 col-sm-6 mb-3">
               <label>User Name</label>
                 <input type="text" class="form-control">
+               
               </div>
+            </div>
+            <div class="row col-md-12">
               <div class="col-md-3 col-sm-6 mb-3">
-              <label>User Name</label>
-                <input type="text" class="form-control">
-              </div>
+              
+                <select name="Description" id="Description" class="form-control">
+                  <option value="">---Select Description Type---</option>
+                  <option value="Details">Details</option>
+                  <option value="About">About Art</option>
+                  <option value="Size">Sizing</option>
+                  <option value="Ship">Shiping</option>
+                </select>
+                </div>
+                <div class="col-md-7 col-sm-3 mb-3">
+                  <ngx-editor [ngModel]="jsonDoc"></ngx-editor>
+                  </div>
+                  <div class="col-md-2 col-sm-3 mb-3">
+                    <button type="submit" class="btn btn-success">Add Description</button>
+                  </div>
             </div>
             <div class="row mt-2">
             <div class="col-md-3 col-sm-6 mb-3">

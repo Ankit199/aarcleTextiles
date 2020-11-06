@@ -5,3 +5,6 @@ https://stackblitz.com/edit/ngx-store-localstorage
 https://www.npmjs.com/package/ngx-store
 
 npm i systemjs   //import dyanmic js 
+
+
+npm install ckeditor4-angular

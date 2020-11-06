@@ -9,6 +9,9 @@ import { SubheadertabComponent } from './customer/subheadertab/subheadertab.comp
 import { ForgotpasswordComponent } from './account/forgotpassword/forgotpassword.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { WebStorageModule } from 'ngx-store';
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { LoadingScreenInterceptor } from "./shared/loading.interceptor";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,11 @@ import { WebStorageModule } from 'ngx-store';
     AppRoutingModule,  
     WebStorageModule  
   ],
-  providers: [],
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LoadingScreenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

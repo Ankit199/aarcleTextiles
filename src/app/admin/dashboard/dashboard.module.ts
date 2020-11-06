@@ -6,7 +6,7 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { DashboardComponent } from './dashboard.component';
-
+import { NgxEditorModule } from 'ngx-editor';
 
 
 const   routeAdmin:Routes=[ 
@@ -16,7 +16,7 @@ const   routeAdmin:Routes=[
 @NgModule({
   declarations: [DashboardComponent,IndexComponent,AdminFooterComponent,AdminHeaderComponent,AdminSidebarComponent ],
   imports: [
-    CommonModule,        
+    CommonModule,  NgxEditorModule,      
     RouterModule.forChild(routeAdmin)
   ],  exports: [RouterModule],
   providers: [ {
