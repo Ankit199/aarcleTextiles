@@ -6,10 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  
+  list:any=[];
+  constructor() { 
+    this.list = 
+      [
+        {name :'L',checked : false},
+        {name :'M',checked : false},
+        {name :'S',checked : false}     
+      ]
   }
 
+  ngOnInit(): void {
+   
+   
+  }
+  shareCheckedList(item:any[]){
+    console.log(item);    
+
+  }
+  shareIndividualCheckedList(item:any={}){    
+    console.log(item);
+    this.list.forEach(x => {
+      if(x.name == item.name) {
+        x.checked =  item.checked ;
+      }
+    });
+  }
 }

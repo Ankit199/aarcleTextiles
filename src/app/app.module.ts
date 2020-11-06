@@ -12,6 +12,7 @@ import { WebStorageModule } from 'ngx-store';
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { LoadingScreenInterceptor } from "./shared/loading.interceptor";
 
+
 @NgModule({
   declarations: [
     AppComponent,

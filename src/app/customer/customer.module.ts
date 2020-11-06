@@ -19,6 +19,7 @@ import { TermconditionsComponent } from './termconditions/termconditions.compone
 
 
 
+
 const   routeCoustomer:Routes=[ 
   { path: '', component: HomeComponent, pathMatch: 'full'},
 { path: 'policy',  pathMatch: 'full',component: PrivacypoliceComponent},

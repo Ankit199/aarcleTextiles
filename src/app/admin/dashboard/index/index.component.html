@@ -22,40 +22,47 @@
               </div>
               <div class="col-md-3 col-sm-6 mb-3">
               <label>Select Category</label>
-              <select name="Description" id="Description" class="form-control">               
-                <option value="Size">Sizing</option>
-                <option value="Ship">Shiping</option>
+              <select name="Category" id="Category" class="form-control">               
+                <option value="men">Men's</option>
+                <option value="women">Women's</option>
               </select>
               </div>
               <div class="col-md-3 col-sm-6 mb-3">
-              <label>User Name</label>
+              <label>Regular Price</label>
+                <input type="text" class="form-control" placeholder="1000">
+              </div>
+              <div class="col-md-3 col-sm-6 mb-3">
+              <label>Sale Price</label>
+                <input type="text" class="form-control" placeholder="600">
+              </div>
+              <div class="col-md-3 col-sm-6 mb-3">
+              <label>Sku</label>
+                <input type="text" class="form-control" placeholder="##001">
+              </div>
+              <div class="col-md-3 col-sm-6 mb-3">
+              <label>Quantity</label>
                 <input type="text" class="form-control">
               </div>
               <div class="col-md-3 col-sm-6 mb-3">
-              <label>User Name</label>
-                <input type="text" class="form-control">
+              <label>Stock Type</label>
+              <select name="Stock" id="Stock" class="form-control">     
+                <option value=""> -- Select Type -- </option>          
+                <option value="In">In Stock</option>
+                <option value="Out">Out Of Stock</option>
+                <option value="Back">Back Order</option>
+              </select>
               </div>
               <div class="col-md-3 col-sm-6 mb-3">
-              <label>User Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="col-md-3 col-sm-6 mb-3">
-              <label>User Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="col-md-3 col-sm-6 mb-3">
-              <label>User Name</label>
-                <input type="text" class="form-control">
-              </div>
-              <div class="col-md-3 col-sm-6 mb-3">
-              <label>User Name</label>
-                <input type="text" class="form-control">
+              <label>Select Size</label>
                
+               <app-multiselectdropdown [list]="list"
+           (shareCheckedList)="shareCheckedList($event)" 
+           (shareIndividualCheckedList)="shareIndividualCheckedList($event)"></app-multiselectdropdown>
               </div>
             </div>
             <div class="row col-md-12">
               <div class="col-md-3 col-sm-6 mb-3">
-              
+                <label>Description Type</label>              
                 <select name="Description" id="Description" class="form-control">
                   <option value="">---Select Description Type---</option>
                   <option value="Details">Details</option>
@@ -65,9 +72,10 @@
                 </select>
                 </div>
                 <div class="col-md-7 col-sm-3 mb-3">
-                  <ngx-editor [ngModel]="jsonDoc"></ngx-editor>
+                  <label>Write Description</label>       
+                  <ngx-editor ></ngx-editor>
                   </div>
-                  <div class="col-md-2 col-sm-3 mb-3">
+                  <div class="col-md-2 col-sm-3 mb-3" style="padding-top:50px">                         
                     <button type="submit" class="btn btn-success">Add Description</button>
                   </div>
             </div>

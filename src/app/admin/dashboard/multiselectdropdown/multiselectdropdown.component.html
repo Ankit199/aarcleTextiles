@@ -1,0 +1,17 @@
+
+<div >
+    <div  (mouseleave)="showDropDown = false">
+        <button class="form-control drop-toggle btn flat" (click)="showDropDown=!showDropDown">
+            <span *ngIf="checkedList.length<=0">-- Select Size --</span>
+            <span *ngIf="checkedList.length>0">{{checkedList.join(', ')}}</span>
+            <i class="fa fa-angle-down"></i>
+        </button>
+        <div class="form-control drop-show" *ngIf="showDropDown">
+            <label *ngFor="let a of list">
+                <input type="checkbox" [checked]="a.checked" [(ngModel)]="a.checked" 
+                    (change)="getSelectedValue(a.checked ? false : true ,a.name)" />
+                <span class="spn" >  {{a.name}}  </span>
+            </label>
+        </div>
+    </div>
+</div>
