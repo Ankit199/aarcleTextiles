@@ -13,7 +13,7 @@ export class MultiselectdropdownComponent implements OnInit {
 
   checkedList: any[];
   currentSelected: {};
-
+  showDropDown:boolean;
   constructor() {
     this.checkedList = [];
   }
