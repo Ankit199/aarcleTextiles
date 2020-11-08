@@ -4,16 +4,15 @@ import { SharedStorage } from 'ngx-store';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
- 
   @SharedStorage('cart') _cartItem: Array<any> = [];
-scriptUrl:string='../../../assets/js/custom.js';
-  constructor(private renderer: Renderer2) { }
+  scriptUrl: string = '../../../assets/js/custom.js';
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
-   this.addJsToElement(this.scriptUrl);
+    this.addJsToElement(this.scriptUrl);
   }
   addJsToElement(src: string): HTMLScriptElement {
     const script = document.createElement('script');
