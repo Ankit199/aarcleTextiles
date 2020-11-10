@@ -11,6 +11,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { WebStorageModule } from 'ngx-store';
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { LoadingScreenInterceptor } from "./shared/loading.interceptor";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -23,7 +25,7 @@ import { LoadingScreenInterceptor } from "./shared/loading.interceptor";
   imports: [
     BrowserModule,
     AppRoutingModule,  
-    WebStorageModule  
+    WebStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })  
   ],
   providers: [ {
     provide: HTTP_INTERCEPTORS,
