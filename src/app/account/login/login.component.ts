@@ -13,9 +13,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-   goToAuth=()=>{
-     debugger;
-//this.router.navigateByUrl['admin'];
+   goToAuth=()=>{   
 this.router.navigate(['/admin']);
    }
 

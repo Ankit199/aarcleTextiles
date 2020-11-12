@@ -14,3 +14,13 @@ https://stackblitz.com/edit/multiselect-checkbox-dropdown?file=src%2Fapp%2Fmulti
 
 npm install -g http-server
 ng add @angular/pwa --project aarclecart
+
+/** Server Side Rendering Begin **/
+
+ng add @nguniversal/express-engine
+
+ng rm  @nguniversal/express-engine
+
+/** Server Side Rendering Close **/
+
+npm install domino

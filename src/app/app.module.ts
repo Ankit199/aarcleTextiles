@@ -23,7 +23,7 @@ import { environment } from '../environments/environment';
     SubheadertabComponent, ForgotpasswordComponent, NotfoundComponent    
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,  
     WebStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })  
   ],
