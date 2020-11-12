@@ -28,6 +28,7 @@
     "domino": "^2.1.6",
     "express": "^4.15.2",
     "localstorage-polyfill": "^1.0.1",
+    "lodash": "^4.17.20",
     "ngx-editor": "^5.0.0-alpha.9",
     "ngx-store": "^2.1.0",
     "rxjs": "~6.6.0",

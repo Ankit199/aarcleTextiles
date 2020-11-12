@@ -24,3 +24,6 @@ ng rm  @nguniversal/express-engine
 /** Server Side Rendering Close **/
 
 npm install domino
+
+
+ npm i lodash
