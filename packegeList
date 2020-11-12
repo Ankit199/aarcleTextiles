@@ -24,6 +24,6 @@ ng rm  @nguniversal/express-engine
 /** Server Side Rendering Close **/
 
 npm install domino
-
+npm install firebase @angular/fire — save
 
  npm i lodash
