@@ -25,5 +25,8 @@ ng rm  @nguniversal/express-engine
 
 npm install domino
 npm install firebase @angular/fire — save
-
+npm install ngx-toastr — save
+npm install @angular/animations — save
+npm install ngx-pagination — save
+npm install -g firebase-tools
  npm i lodash

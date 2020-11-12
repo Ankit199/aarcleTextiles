@@ -13,8 +13,10 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { LoadingScreenInterceptor } from "./shared/loading.interceptor";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,11 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,  
-    WebStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })  
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'aarcle'),
+    WebStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })  ,
+    AngularFirestoreModule, // Only required for database features
+    AngularFireAuthModule, // Only required for auth features,
+    AngularFireStorageModule // Only required for storage features
   ],
   providers: [ {
     provide: HTTP_INTERCEPTORS,
