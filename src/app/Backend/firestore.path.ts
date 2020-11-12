@@ -1,4 +1,6 @@
-export const SaleRegisterFirePath = 'sale/';  // tostore product
-export const DistributorRegisterFirePath = 'DistributerUser/';  // tostore product
-export const ContactUSFirePath = 'contactUs/'; 
-export const ProductList ='/admin/9ek7PcTgw2z2LMFrp0hj/ecom'
+export const _saleRegisterFirePath = 'registerForSale/';  // tostore product
+export const _distributorRegisterFirePath = 'registerForDistributer/';  // tostore product
+export const _contactUSFirePath = 'contactUs/'; 
+export const _productList ='product/';
+export const _userpath ='userRegister/'
+export const _orderList ='order/'
