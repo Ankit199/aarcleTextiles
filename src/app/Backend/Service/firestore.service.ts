@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { AngularFireStorage } from 'angularfire2/storage';
 import * as firebase from 'firebase/firebase';
-import 'firebase/firestore';
+
 //import { Observable } from 'rxjs/Observable';
 import * as _ from 'lodash';
 import { Observable } from 'rxjs';
