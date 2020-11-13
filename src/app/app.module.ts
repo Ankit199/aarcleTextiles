@@ -14,7 +14,12 @@ import { LoadingScreenInterceptor } from './shared/loading.interceptor';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireStorage } from 'angularfire2/storage';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { FirestoreService } from './Backend/Service/firestore.service';
+import { AuthService } from './Backend/Service/auth.service';
+import {AngularFireAuthModule} from "angularfire2/auth";
 
 export const firebaseConfig = environment.firebaseConfig;
 @NgModule({
@@ -33,13 +38,18 @@ export const firebaseConfig = environment.firebaseConfig;
     // ToastrModule,
     FormsModule,
     AppRoutingModule,
-    
+    AngularFireModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     WebStorageModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
   ],
   providers: [
+    AngularFireStorage,AuthService,
+    AngularFirestore,
+    FirestoreService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingScreenInterceptor,
