@@ -2,7 +2,8 @@ import { Component, Inject, OnInit, PLATFORM_ID, Renderer2, } from '@angular/cor
 import { LocalStorage, SharedStorage } from 'ngx-store';
 import { isPlatformBrowser } from '@angular/common';
 import { FirestoreService } from 'src/app/Backend/Service/firestore.service';
-
+import * as _ from 'lodash';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,7 +12,13 @@ import { FirestoreService } from 'src/app/Backend/Service/firestore.service';
 export class HomeComponent implements OnInit {
   @LocalStorage('user') isUser: any = {};
   scriptUrl: string = '../../../assets/js/custom.js';
-  constructor(private sharedService:FirestoreService,private renderer: Renderer2,@Inject(PLATFORM_ID) private platformId: any) {}
+  constructor( public router: Router,private sharedService:FirestoreService,private renderer: Renderer2,@Inject(PLATFORM_ID) private platformId: any) {
+    if(!_.isEmpty(this.isUser)){  
+      if(this.isUser.Role=='ADMIN'){
+        this.router.navigate(['/admin']);
+      }
+    }
+  }
 
   ngOnInit(): void {
     this.addJsToElement(this.scriptUrl);
