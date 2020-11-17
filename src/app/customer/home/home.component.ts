@@ -25,8 +25,7 @@ export class HomeComponent implements OnInit {
     return script;
   }
 }
-addToCart=()=>{
-  debugger;
+addToCart=()=>{ 
   let data={
     Id:'001',
     name:'Product',

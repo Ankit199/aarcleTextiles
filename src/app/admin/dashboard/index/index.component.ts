@@ -11,9 +11,9 @@ export class IndexComponent implements OnInit {
   DescriptionList: any = [];
   constructor() {
     this.list = [
-      { name: 'L', checked: false },
-      { name: 'M', checked: false },
-      { name: 'S', checked: false },
+      { name: '28', checked: false },
+      { name: '32', checked: false },
+      { name: '34', checked: false },
     ];
   }
 

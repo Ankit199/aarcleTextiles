@@ -14,9 +14,8 @@ export class HeadertabComponent implements OnInit {
   cartItem:any=[];
   constructor(private auth:AuthService,  public toast: ToastrService,private sharedService:FirestoreService) { }
 
-  ngOnInit(): void {
-    console.log(this.isUser);
-    if(!_.isEmpty(this.isUser)){
+  ngOnInit(): void {    
+    if(!_.isEmpty(this.isUser)){     
       this.isUser.name = this.isUser.name.charAt(0).toUpperCase() + this.isUser.name.slice(1);
     }
   this.getCartItem();
