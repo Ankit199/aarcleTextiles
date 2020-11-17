@@ -12,12 +12,10 @@ export class LoginComponent implements OnInit {
 
   constructor( public router: Router,public auth: AuthService) { 
     this.auth.user.subscribe((userData: any) => {
-      console.log(userData, "Login User Data");
-     
-       if (userData) {
-        
+      console.log(userData, "Login User Data");     
+       if (userData) {        
         this.router.navigate(['/home']);
-      } else {
+      }else {
         console.log('nowhere');
       }
     });

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './account/login/login.component';
@@ -20,7 +20,8 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { FirestoreService } from './Backend/Service/firestore.service';
 import { AuthService } from './Backend/Service/auth.service';
 import {AngularFireAuthModule} from "angularfire2/auth";
-
+import { ToastrModule } from 'ngx-toastr';
+import { AlertModule } from './shared/@alert/alert.module';
 export const firebaseConfig = environment.firebaseConfig;
 @NgModule({
   declarations: [
@@ -32,10 +33,15 @@ export const firebaseConfig = environment.firebaseConfig;
     NotfoundComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ReactiveFormsModule,
-    // ToastrModule,
+    ToastrModule.forRoot({
+      timeOut: 1000,
+      positionClass: 'toast-bottom-right'
+    }),
+    AlertModule,
     FormsModule,
     AppRoutingModule,
     AngularFireModule,

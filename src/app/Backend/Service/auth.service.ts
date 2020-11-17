@@ -38,7 +38,7 @@ export class AuthService {
     private afs: AngularFirestore,
     private router: Router
   ) {
-    this.roleUser = 'admin';
+    this.roleUser = 'admin' || 'user';
     this.userID = '';
     this.userAuth = this.afAuth.auth;
     this.user = this.afAuth.authState
@@ -113,13 +113,12 @@ export class AuthService {
       .then((userCredential) => {
         this.newUser = user;
         console.log('userCredential authService', userCredential);
-        userCredential.user.updateProfile({
-          //
+        userCredential.user.updateProfile({          
           displayName: user.name, // when we create email base au thencition  username is not there so we  set user name here
         });
         this.insertUserData(userCredential).then((res) => {
-          console.log('res>>', res);
-          //  this.router.navigate(['/home'])
+          console.log('res>>', res);         
+           // this.router.navigate(['/login'])
         });
       })
       .catch((error) => {
@@ -128,12 +127,13 @@ export class AuthService {
   }
 
   insertUserData(userCredential: firebase.auth.UserCredential) {
-    console.log(' this.newUser authService', this.newUser);
-    debugger;
-    return this.afs.doc(`registerUsers/${userCredential.user.uid}`).set({
+    console.log(' this.newUser authService', this.newUser);    
+    return this.afs.doc(`Users/${userCredential.user.uid}`).set({
       email: this.newUser.email,
       name: this.newUser.name,
       mobile: this.newUser.mobile,
+      password:this.newUser.password,
+      Role:this.newUser.Role
     });
   }
   emailSignUp1(email: string, password: string) {
