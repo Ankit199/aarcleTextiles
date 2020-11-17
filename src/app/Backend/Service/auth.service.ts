@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { ToastrService } from 'ngx-toastr';
 import {
   AngularFirestore,
   AngularFirestoreDocument,
@@ -8,6 +9,7 @@ import {
 import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { User } from 'firebase';
+import { SpinnerService } from 'src/app/shared/@spinner/spinner.service';
 
 // export interface User {
 //   uid: string;
@@ -36,7 +38,9 @@ export class AuthService {
   constructor(
     private afAuth: AngularFireAuth,
     private afs: AngularFirestore,
-    private router: Router
+    private router: Router,
+    private toaste: ToastrService ,
+    private spinner:SpinnerService
   ) {
     this.roleUser = 'admin' || 'user';
     this.userID = '';
@@ -106,6 +110,7 @@ export class AuthService {
   //charu
 
   emailSignUp(user) {
+    this.spinner.showLoader();
     let email = user.email;
     let password = user.password;
     return this.afAuth.auth
@@ -117,11 +122,14 @@ export class AuthService {
           displayName: user.name, // when we create email base au thencition  username is not there so we  set user name here
         });
         this.insertUserData(userCredential).then((res) => {
-          console.log('res>>', res);         
+          console.log('res>>', res);   
+          this.spinner.hideLoader();      
            // this.router.navigate(['/login'])
         });
       })
-      .catch((error) => {
+      .catch((error:any) => {    
+        this.spinner.hideLoader();  
+        this.toaste.error(error.message,error.code);
         console.log(error);
       });
   }

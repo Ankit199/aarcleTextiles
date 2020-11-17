@@ -22,12 +22,15 @@ import { AuthService } from './Backend/Service/auth.service';
 import {AngularFireAuthModule} from "angularfire2/auth";
 import { ToastrModule } from 'ngx-toastr';
 import { AlertModule } from './shared/@alert/alert.module';
+import { SpinnerService } from './shared/@spinner/spinner.service';
+import { SpinnerComponent } from './shared/@spinner/spinner.component';
 export const firebaseConfig = environment.firebaseConfig;
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
+    SpinnerComponent,
     SubheadertabComponent,
     ForgotpasswordComponent,
     NotfoundComponent,
@@ -38,8 +41,8 @@ export const firebaseConfig = environment.firebaseConfig;
     AppRoutingModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
-      timeOut: 1000,
-      positionClass: 'toast-bottom-right'
+      timeOut: 3000,
+      positionClass: 'toast-top-right'
     }),
     AlertModule,
     FormsModule,
@@ -60,7 +63,8 @@ export const firebaseConfig = environment.firebaseConfig;
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingScreenInterceptor,
       multi: true,
-    }  
+    }  ,
+   SpinnerService
   ],
   bootstrap: [AppComponent],
 })
