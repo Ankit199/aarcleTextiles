@@ -6,9 +6,9 @@ import {
   AngularFirestore,
   AngularFirestoreDocument,
 } from '@angular/fire/firestore';
-import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
-import { User } from 'firebase';
+// import { BehaviorSubject, Observable, of as observableOf } from 'rxjs';
+// import { switchMap } from 'rxjs/operators';
+// import { User } from 'firebase';
 import { SpinnerService } from 'src/app/shared/@spinner/spinner.service';
 
 // export interface User {
@@ -91,7 +91,7 @@ export class AuthService {
 
   signOut() {
     this.afAuth.auth.signOut().then(() => {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
     });
   }
 

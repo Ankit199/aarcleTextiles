@@ -38,8 +38,7 @@ export class SignupComponent implements OnInit {
     if (this.signupModel.invalid) {
       return;
     }
-    this.signupModel.value.Role = 'USER';
-    debugger;
+    this.signupModel.value.Role = 'USER';  
     this.auth
       .emailSignUp(this.signupModel.value)
       .then((res: any) => {
