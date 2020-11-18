@@ -82,4 +82,7 @@ export class LoginComponent implements OnInit {
       }
     );
   };
+  socialLogin = (type:string)=>{
+
+  }
 }

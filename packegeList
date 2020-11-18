@@ -14,7 +14,7 @@ https://stackblitz.com/edit/multiselect-checkbox-dropdown?file=src%2Fapp%2Fmulti
 
 npm install -g http-server
 ng add @angular/pwa --project aarclecart
-
+npm i ngx-editor
 /** Server Side Rendering Begin **/
 
 ng add @nguniversal/express-engine
