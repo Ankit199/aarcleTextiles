@@ -19,7 +19,8 @@ export class MultiselectdropdownComponent implements OnInit {
   }
   ngOnInit(): void {}
 
-  getSelectedValue(status: Boolean, value: String) {  
+  getSelectedValue(status: Boolean, value: String) { 
+    debugger; 
     if (status) {
       this.checkedList.push(value);
     } else {

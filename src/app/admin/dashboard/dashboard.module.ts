@@ -8,7 +8,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { DashboardComponent } from './dashboard.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { MultiselectdropdownComponent } from './multiselectdropdown/multiselectdropdown.component';
-
+import { FormsModule }   from '@angular/forms';
 
 const   routeAdmin:Routes=[ 
   { path: '', component: IndexComponent, pathMatch: 'full'},
@@ -17,7 +17,7 @@ const   routeAdmin:Routes=[
 @NgModule({
   declarations: [DashboardComponent,IndexComponent,AdminFooterComponent,AdminHeaderComponent,AdminSidebarComponent, MultiselectdropdownComponent ],
   imports: [
-    CommonModule,  NgxEditorModule,      
+    CommonModule,  NgxEditorModule,  FormsModule,    
     RouterModule.forChild(routeAdmin)
     
   ],  exports: [RouterModule],

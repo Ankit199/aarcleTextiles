@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AddnewProductFirePath } from 'src/app/Backend/Service/firestore.path';
+import { FirestoreService } from 'src/app/Backend/Service/firestore.service';
 
 @Component({
   selector: 'app-index',
@@ -6,15 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css'],
 })
 export class IndexComponent implements OnInit {
+  EcommerceForm:any;
+  EcommerceID: string | null;
   list: any = [];
   product:any;
   DescriptionList: any = [];
-  constructor() {
+  constructor(public firestoreService: FirestoreService,private ref: ChangeDetectorRef) {
     this.list = [
       { name: '28', checked: false },
       { name: '32', checked: false },
       { name: '34', checked: false },
     ];
+   // this.ref.detectChanges();
   }
 
   ngOnInit(): void {}
@@ -28,6 +34,7 @@ export class IndexComponent implements OnInit {
         x.checked = item.checked;
       }
     });
+    console.log(this.list);
   }
 
   _addProductDescription = (requestFrom, index?) => {
@@ -39,4 +46,10 @@ export class IndexComponent implements OnInit {
       return;
     }
   };
+  addEcommerce(EcommerceForm: NgForm) {
+    debugger;
+    console.table(EcommerceForm.value)
+    this.firestoreService.add(AddnewProductFirePath, EcommerceForm.form.value);
+    alert("Data Added");
+  }
 }
