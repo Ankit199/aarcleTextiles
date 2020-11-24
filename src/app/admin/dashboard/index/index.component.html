@@ -98,6 +98,36 @@
                   </table>
                
               </div>
+              <div class="row">
+                <div class="col-md-5 col-sm-6 mb-3">
+                  <div class="p-3 mb-2 bg-info text-white">
+                  Add Color 
+             </div>
+             </div>
+             
+             <div class="col-md-7 col-sm-6 mb-3">
+              <div class="p-3 mb-2 bg-info text-white text-center">
+                 Color  List
+           </div>
+             </div>
+              </div>
+              
+              <div class="row col-md-12 col-lg-12 col-sm-12">
+                <div class="col-md-3 col-sm-6 mb-3">
+                
+                  <span id="color_front" (click)="spanColorClick()"></span>
+                  <input  id="colour" (change)="colorchange()" type="color" value="#000000" name="Sku" placeholder="##001">
+                </div>
+                <div class="col-md-2 col-sm-3 mb-3" style="padding-top:15px">                         
+                  <button (click)="addColor()" class="btn btn-success">Add Color</button>
+                </div>
+                <div class="col-md-7 col-sm-6 mb-3">
+                  <div class="form-group" >
+                  <div class='inline'>
+                    <a class="close bts"></a>
+                  </div><div class='inline'></div><div class='inline'></div></div>
+                </div>
+              </div>
               <div class="row mt-2">
               <div class="col-md-3 col-sm-6 mb-3">
                <button type="submit" class="btn btn-info">Submit</button>

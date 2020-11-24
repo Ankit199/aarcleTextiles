@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
     this.spinner.showLoader();
 
     if (this.loginModel.invalid) {
+      this.spinner.hideLoader();
       return;
     }
     this.auth

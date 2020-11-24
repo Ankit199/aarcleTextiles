@@ -1,7 +1,9 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { AddnewProductFirePath } from 'src/app/Backend/Service/firestore.path';
 import { FirestoreService } from 'src/app/Backend/Service/firestore.service';
+import { SpinnerService } from 'src/app/shared/@spinner/spinner.service';
 
 @Component({
   selector: 'app-index',
@@ -9,18 +11,27 @@ import { FirestoreService } from 'src/app/Backend/Service/firestore.service';
   styleUrls: ['./index.component.css'],
 })
 export class IndexComponent implements OnInit {
-  EcommerceForm:any;
+  EcommerceForm: any;
+  colorModel: string = '';
   EcommerceID: string | null;
   list: any = [];
-  product:any;
+  _colorList: any = [];
+  imageUrl: any = [];
+  galleryUrl: any = [];
+  product: any;
   DescriptionList: any = [];
-  constructor(public firestoreService: FirestoreService,private ref: ChangeDetectorRef) {
+  constructor(
+    public toast: ToastrService,
+    public firestoreService: FirestoreService,
+    private ref: ChangeDetectorRef,
+    private spinner: SpinnerService
+  ) {
     this.list = [
       { name: '28', checked: false },
       { name: '32', checked: false },
       { name: '34', checked: false },
     ];
-   // this.ref.detectChanges();
+    // this.ref.detectChanges();
   }
 
   ngOnInit(): void {}
@@ -47,9 +58,67 @@ export class IndexComponent implements OnInit {
     }
   };
   addEcommerce(EcommerceForm: NgForm) {
-    debugger;
-    console.table(EcommerceForm.value)
+    console.table(EcommerceForm.value);
     this.firestoreService.add(AddnewProductFirePath, EcommerceForm.form.value);
-    alert("Data Added");
+    alert('Data Added');
   }
+  uploadFile(event: any, type: string) {
+    this.spinner.showLoader();
+    const id = Math.random().toString(36).substring(2);
+    if (event && type) {
+      if (type === 'image') {
+        alert('Image uploading..');
+        // this.toastr.info("Image uploading..", "Wait!");
+        if (event.target.files && event.target.files[0]) {
+          var filesAmount = event.target.files.length;
+          for (let i = 0; i < filesAmount; i++) {
+            const uploadTask = this.firestoreService.uploadFileToStorage(
+              `Ecommerce/Product/${id}`,
+              event.target.files[i]
+            );
+            uploadTask.then().then(
+              (snapshot) => {
+                this.spinner.hideLoader();
+                snapshot.ref.getDownloadURL().then((imageUrl: any) => {
+                  this.imageUrl.push({ url: imageUrl });
+                });
+              },
+              (reason) => {
+                this.spinner.hideLoader();
+                this.toast.error(
+                  'Invalid image size/format. Please retry with correct image.',
+                  'Error!'
+                );
+              }
+            );
+          }
+          if (this.imageUrl.length > 0) {
+            this.toast.success('Image uploaded', 'Success!');
+          }
+        }
+      }
+    }
+  }
+
+  spanColorClick = () => {
+    (document.getElementById('colour') as HTMLInputElement).click();
+  };
+  colorchange = () => {
+    this.colorModel = (document.getElementById(
+      'colour'
+    ) as HTMLInputElement).value;
+    console.log(this.colorModel);
+    (document.getElementById(
+      'color_front'
+    ) as HTMLInputElement).style.backgroundColor = (document.getElementById(
+      'colour'
+    ) as HTMLInputElement).value;
+  };
+  addColor = (): void => {
+    if (this.colorModel !== '') {
+      this._colorList.push(this.colorModel);
+      this.colorModel = '';
+    } else {
+    }
+  };
 }
