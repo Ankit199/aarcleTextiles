@@ -16,7 +16,7 @@ npm install -g http-server
 ng add @angular/pwa --project aarclecart
 npm i ngx-editor
 /** Server Side Rendering Begin **/
-
+https://jasonwatmore.com/post/2020/09/24/angular-10-custom-modal-window-dialog-box
 ng add @nguniversal/express-engine
 
 ng rm  @nguniversal/express-engine
