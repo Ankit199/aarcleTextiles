@@ -25,6 +25,7 @@ import { AlertModule } from './shared/@alert/alert.module';
 import { SpinnerService } from './shared/@spinner/spinner.service';
 import { SpinnerComponent } from './shared/@spinner/spinner.component';
 export const firebaseConfig = environment.firebaseConfig;
+
 @NgModule({
   declarations: [
     AppComponent,

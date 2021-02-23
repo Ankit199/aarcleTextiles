@@ -18,7 +18,7 @@ export class HeadertabComponent implements OnInit {
     if(!_.isEmpty(this.isUser)){     
       this.isUser.name = this.isUser.name.charAt(0).toUpperCase() + this.isUser.name.slice(1);
     }
-  this.getCartItem();
+      this.getCartItem();
   }
 
   logOut=()=>{

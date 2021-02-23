@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+//import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Loader } from './loader.model';
-
+import * as Rx from "rxjs";
 @Injectable()
 export class SpinnerService {
-  private loader = new BehaviorSubject<Loader>({id: 'global', status: false});
+  public loader = new Rx.BehaviorSubject<Loader>({id: 'global', status: false});
 
   loaderStatus$ = this.loader.asObservable();
 

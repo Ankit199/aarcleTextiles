@@ -14,7 +14,7 @@
           <div class="col-md-6 col-12">
             <ul class="list-inline float-right top-right">
               <li class="account-login" *ngIf="!isUser.isLogged"><span><a [routerLink]="['/login']" href='javascript:void(0)'><i class="fa fa-lock"></i> Log in</a><small>or</small><a [routerLink]="['/signup']" href='javascript:void(0)'><i class="fa fa-user"></i> Sign Up</a></span></li>
-              <li class="account-login" *ngIf="isUser.isLogged"><span><a href='javascript:void(0)'>{{isUser.name}}</a><small> </small><a (click)="logOut()" href='javascript:void(0)'><i class="fa fa-sign-out"></i> Logout </a> </span></li>
+              <li class="account-login" *ngIf="isUser.isLogged"><span><a [routerLink]="['./my-account']" href='javascript:void(0)'>{{isUser.name}}</a><small> </small><a (click)="logOut()" href='javascript:void(0)'><i class="fa fa-sign-out"></i> Logout </a> </span></li>
               
               <li class="dropdown cart-dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>$0</a>
                 <ul class="dropdown-menu dropdown-menu-right">
@@ -69,7 +69,7 @@
               </ul>
             </li>
             <li class="nav-item"><a [routerLink]="['./contact-us']"  href="javascrip.void(0)" class="nav-link" role="button">Contact Us</a></li>
-            <li class="nav-item  "> <a [routerLink]="['./my-account']" href="javascript:void(0)" class="nav-link"  role="button" >My Account</a>
+            <li class="nav-item  "> <a [routerLink]="['./my-account']" href="javascript:void(0)" class="nav-link"  role="button" *ngIf="isUser.isLogged">My Account</a>
               <!-- <ul class="dropdown-menu dropdown-menu-right">
                 <li class=""><a href="account-dashboard.html">Dashboard</a></li>
                 <li class=""><a href="account-profile.html">Profile</a></li>
