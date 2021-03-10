@@ -63,9 +63,10 @@ export class IndexComponent implements OnInit {
     }
   };
   addEcommerce(EcommerceForm: NgForm) {
-   // console.table(EcommerceForm.value);
-    this.firestoreService.add(AddnewProductFirePath, EcommerceForm.form.value);
-    this.toast.success('Data Saved Successfully.', 'Success!');
+    debugger
+    console.table(EcommerceForm.value);
+   // this.firestoreService.add(AddnewProductFirePath, EcommerceForm.form.value);
+    //this.toast.success('Data Saved Successfully.', 'Success!');
   }
   getUniqueId(parts: number): string {
     const stringArr = [];

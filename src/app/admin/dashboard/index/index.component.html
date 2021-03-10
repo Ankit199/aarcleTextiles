@@ -2,12 +2,12 @@
 
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
-      <a href="#">Dashboard</a>
+      <a href="javascript:void(0)">Dashboard</a>
     </li>
     <li class="breadcrumb-item active">My Dashboard</li>
   </ol>
 
-  <form class="form-horizontal" id="ecommerceForm" #ecommerceForm="ngForm"
+  <form class="form-horizontal" #ecommerceForm="ngForm"
     (ngSubmit)="addEcommerce(ecommerceForm);ecommerceForm.reset()">
 
     <div class="row">
@@ -20,7 +20,7 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 mb-3">
               <label>Product Title</label>
-              <input class="form-control" required type="text" name="prodTitle" required
+              <input class="form-control"  type="text" name="prodTitle" required
                 [ngModel]=" EcommerceForm?.prodTitle" #prodTitle="ngModel">
               <div *ngIf="prodTitle.errors && ecommerceForm.submitted && !isValidFormSubmitted">
                 <div class="p-3 mb-2 bg-danger text-white" role="alert" *ngIf="prodTitle.errors.required">
@@ -120,9 +120,9 @@
               <ngx-editor></ngx-editor>
             </div>
             <div class="col-md-2 col-sm-3 mb-3" style="padding-top:50px">
-              <button type="submit" class="btn btn-success">Add Description</button>
+              <button type="button" class="btn btn-success">Add Description</button>
             </div>
-            <div class=" col-md-12 col-lg-12 col-sm-12 p-3 mb-2 bg-danger text-white">
+            <div *ngIf="DescriptionList.length==0" class="col-md-12 col-lg-12 col-sm-12 p-3 mb-2 bg-danger text-white">
 
               Please Enter Description.
 
@@ -172,7 +172,7 @@
 
             </div>
             <div class="col-md-2 col-sm-3 mb-3" style="padding-top:15px">
-              <button (click)="addColor()" class="btn btn-success">Add Color</button>
+              <button type="button" (click)="addColor()" class="btn btn-success">Add Color</button>
             </div>
             <div class="col-md-7 col-sm-6 mb-3">
               <div class="form-group">
@@ -190,7 +190,7 @@
 
           <div class="row mt-2">
             <div class="col-md-3 col-sm-6 mb-3">
-              <button type="submit" class="btn btn-info">Submit</button>
+              <button  type="button" class="btn btn-info">Submit</button>
             </div>
           </div>
         </div>
