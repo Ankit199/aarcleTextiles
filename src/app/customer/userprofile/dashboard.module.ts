@@ -22,7 +22,8 @@ const   routeprofile:Routes=[
 ]
 
 @NgModule({
-  declarations: [DefaultprofileComponent, WishlistComponent,OrderlistComponent,OrderdetailComponent,AddressComponent ,ProfileComponent],
+  declarations: [DefaultprofileComponent, WishlistComponent,OrderlistComponent,
+    OrderdetailComponent,AddressComponent ,ProfileComponent],
   imports: [
     CommonModule,        
     RouterModule.forChild(routeprofile)

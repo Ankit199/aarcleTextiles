@@ -9,13 +9,19 @@ import { DashboardComponent } from './dashboard.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { MultiselectdropdownComponent } from './multiselectdropdown/multiselectdropdown.component';
 import { FormsModule }   from '@angular/forms';
+import { CategoryComponent } from './category/category.component';
+import { AddcategoryComponent } from './addcategory/addcategory.component';
 
 const   routeAdmin:Routes=[ 
   { path: '', component: IndexComponent, pathMatch: 'full'},
+ { path: 'category', component: CategoryComponent },
+  {path: 'addcategory', component: AddcategoryComponent}
+  
 ]
 
 @NgModule({
-  declarations: [DashboardComponent,IndexComponent,AdminFooterComponent,AdminHeaderComponent,AdminSidebarComponent, MultiselectdropdownComponent ],
+  declarations: [DashboardComponent,IndexComponent,AdminFooterComponent,AdminHeaderComponent,AdminSidebarComponent, 
+  MultiselectdropdownComponent, CategoryComponent, AddcategoryComponent ],
   imports: [
     CommonModule,  NgxEditorModule,  FormsModule,    
     RouterModule.forChild(routeAdmin)
