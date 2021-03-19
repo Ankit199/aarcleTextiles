@@ -3,6 +3,11 @@ import { AngularFireStorage } from 'angularfire2/storage';
 //import { AngularFireStorage } from "@angular/fire/storage";
 import { map, finalize } from "rxjs/operators";
 import { Observable } from "rxjs";
+import { Addcategory } from 'src/app/Backend/Service/firestore.path';
+import { ToastrService } from 'ngx-toastr';
+import { FirestoreService } from 'src/app/Backend/Service/firestore.service';
+import { NgForm } from '@angular/forms';
+
 @Component({
   selector: 'app-addcategory',
   templateUrl: './addcategory.component.html',
@@ -10,13 +15,17 @@ import { Observable } from "rxjs";
 })
 export class AddcategoryComponent implements OnInit {
   selectedFile: File = null;
-  fb;
+  fb:any;
   downloadURL: Observable<string>;
-  constructor(private storage: AngularFireStorage) {}
+  customeErrortag={
+    isUploaded:false
+  }
+  constructor(private storage: AngularFireStorage, public toast: ToastrService,
+    public firestoreService: FirestoreService,) {}
 
   ngOnInit(): void {
   }
-  onFileSelected(event) {
+  onFileSelected(event:any) {
     var n = Date.now();
     const file = event.target.files[0];
     const filePath = `category/${n}`;
@@ -40,5 +49,10 @@ export class AddcategoryComponent implements OnInit {
           console.log(url);
         }
       });
+  }
+
+  addCategory=(categoryForm:NgForm)=>{
+    this.firestoreService.add(Addcategory, categoryForm.form.value);
+    this.toast.success('Data Saved Successfully.', 'Success!');
   }
 }

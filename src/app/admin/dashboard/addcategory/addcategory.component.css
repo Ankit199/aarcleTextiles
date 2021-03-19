@@ -2,4 +2,10 @@
     text-align: center;
     line-height: 50px;
     background-color: #007bff!important;
+    font-size: 25px;
+}
+
+
+::ng-deep .btn {
+    font-size: 20px;
 }
