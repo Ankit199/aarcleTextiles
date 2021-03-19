@@ -11,10 +11,10 @@ import { SpinnerService } from 'src/app/shared/@spinner/spinner.service';
   styleUrls: ['./index.component.css'],
 })
 export class IndexComponent implements OnInit {
-  EcommerceForm: any={
-    Sku:""
+  EcommerceForm: any = {
+    Sku: '',
   };
-  isValidFormSubmitted:boolean=false;
+  isValidFormSubmitted: boolean = false;
   colorModel: string = '';
   EcommerceID: string | null;
   list: any = [];
@@ -34,7 +34,7 @@ export class IndexComponent implements OnInit {
       { name: '32', checked: false },
       { name: '34', checked: false },
     ];
-    this.EcommerceForm.Sku=this.getUniqueId(3);
+    this.EcommerceForm.Sku = this.getUniqueId(3);
 
     // this.ref.detectChanges();
   }
@@ -63,16 +63,12 @@ export class IndexComponent implements OnInit {
     }
   };
   addEcommerce(EcommerceForm: NgForm) {
-    debugger
     console.table(EcommerceForm.value);
    // this.firestoreService.add(AddnewProductFirePath, EcommerceForm.form.value);
     //this.toast.success('Data Saved Successfully.', 'Success!');
   }
-  getUniqueId(parts: number): string {
-    const stringArr = [];
-    for(let i = 0; i< parts; i++){
-      // tslint:disable-next-line:no-bitwise
-      const S4 = (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+        .toString(16)
+        .substring(1);
       stringArr.push(S4);
     }
     return stringArr.join('-');
@@ -82,8 +78,8 @@ export class IndexComponent implements OnInit {
     const id = Math.random().toString(36).substring(2);
     if (event && type) {
       if (type === 'image') {
-       // alert('Image uploading..');
-         this.toast.info("Image uploading..", "Wait!");
+        // alert('Image uploading..');
+        this.toast.info('Image uploading..', 'Wait!');
         if (event.target.files && event.target.files[0]) {
           var filesAmount = event.target.files.length;
           for (let i = 0; i < filesAmount; i++) {
@@ -115,7 +111,6 @@ export class IndexComponent implements OnInit {
     }
   }
 
-  
   colorchange = () => {
     // this.colorModel = (document.getElementById(
     //   'colour'

@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'admin',pathMatch: 'full', component: DashboardComponent, loadChildren: () =>
+  { path: 'admin', component: DashboardComponent, loadChildren: () =>
              import('./admin/dashboard/dashboard.module').then((m) => m.DashboardModule)
     },
   { path: 'forgot-password',pathMatch: 'full', component: ForgotpasswordComponent },
